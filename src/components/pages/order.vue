@@ -14,10 +14,11 @@
       </div>
 
       <mt-tab-container v-model="active">
+
         <mt-tab-container-item id="tab-container1" v-if="selected==1">
           <div class="bundlev" >
 
-            <div class="cart-shop">
+            <div class="cart-shop order-shop">
 
               <div class="ico">
 
@@ -34,7 +35,7 @@
 
               <div class="cart-state">
                 <div>
-                  <p>编辑</p>
+                  <span class="cart-span">交易成功</span>
                 </div>
               </div>
 
@@ -42,21 +43,27 @@
 
             <mt-cell-swipe >
 
-              <div class="item-list">
+              <div class="order-list">
 
-                <div class="item-detail">
+                <div class="order-detail">
 
-                  <div class="cart-item-img">
+                  <div class="cart-item-img cart-order">
                     <img src="https://gw.alicdn.com/bao/uploaded/i1/TB1BiDbPXXXXXXvXXXXXXXXXXXX_!!0-item_pic.jpg_200x200q50s150.jpg_.webp">
                   </div>
 
-                  <div class="cart-item-info">
+                  <div class="cart-item-info order-info">
 
                     <h3>标致新408中网改色308改装508 2008 308S 3008 301拉花装饰贴</h3>
 
+                    <p>颜色分类:蓝色</p>
+
                   </div>
 
-                  <div class="cart-item-price">9.8</div>
+                  <div class="cart-item-price order-price">
+                    <p class="order-now-price">￥9.8</p>
+                    <p class="order-old-price">￥9.8</p>
+                    <p class="order-number">X2</p>
+                  </div>
 
                 </div>
 
@@ -66,6 +73,7 @@
 
           </div>
         </mt-tab-container-item>
+
         <mt-tab-container-item id="tab-container2" v-if="selected==2">
           <a v-for="(item,$index) in lists2" :key="item" class="item" href="javascript:;">
             <div class="item-pic">
@@ -95,6 +103,7 @@
             </div>
           </a>
         </mt-tab-container-item>
+
         <mt-tab-container-item id="tab-container3" v-if="selected==3">
           <a v-for="(item,$index) in lists3" :key="item" class="item" href="javascript:;">
             <div class="item-pic">
@@ -124,6 +133,7 @@
             </div>
           </a>
         </mt-tab-container-item>
+
         <mt-tab-container-item id="tab-container4" v-if="selected==4">
           <a v-for="(item,$index) in lists3" :key="item" class="item" href="javascript:;">
             <div class="item-pic">
@@ -153,6 +163,7 @@
             </div>
           </a>
         </mt-tab-container-item>
+
         <mt-tab-container-item id="tab-container5" v-if="selected==5">
           <a v-for="(item,$index) in lists3" :key="item" class="item" href="javascript:;">
             <div class="item-pic">
@@ -182,6 +193,7 @@
             </div>
           </a>
         </mt-tab-container-item>
+
       </mt-tab-container>
 
     </div>
@@ -254,6 +266,7 @@
           return
         }
         _this.$http.get("http://fsadmin.adpush.cn/api/init.json?type="+type).then(response => {
+          console.info(response)
           _this["lists"+type]=[
             {
               src:"//gw.alicdn.com/bao/uploaded/i2/1878106004980526633/TB28495jR0lpuFjSszdXXcdxFXa_!!0-juitemmedia.jpg_230x230q75s150.jpg_.webp",

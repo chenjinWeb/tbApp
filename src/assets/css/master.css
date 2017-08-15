@@ -835,6 +835,7 @@ span.shopIco_B{ background: url("../images/geren.png") no-repeat; background-siz
 span.shopIco_C{ background: url("../images/qiye.jpg") no-repeat; background-size: cover; display: inline-block; width: 0.2rem; height: 0.2rem;}
 div.cart-contact span{ display: inline-block; width: 0.1rem; height: 0.15rem; background: url("../images/toRight.png") no-repeat; background-size: 0.1rem 0.15rem; margin-left: 0.1rem;}
 div.cart-state{ position: absolute; height: 100%; right: 0;}
+div.cart-state .cart-span{ margin-right: 0.1rem; color: #ff5000;}
 div.cart-state p{ width: 0.5rem;}
 div.cart-state p:first-child{ border-right: 1px solid #e5e5e5;}
 div.cart-group{ position: relative;}
@@ -952,14 +953,18 @@ div.fix-text{ height: 1.0rem; border-bottom: 1px solid #e5e5e5; background: #fff
 div.fix-text textarea{ width: 100%; height: 1.0rem; resize: none; font-size: 0.16rem;color: #454545; line-height: 0.24rem; background: none;}
 div.fix-save{ height: 0.4rem; line-height: 0.4rem; margin-top: 0.3rem; font-size: 0.16rem; color: #ffffff; background: #fb5314;}
 
-
-
-
-
-
-
-
-
+/*订单管理*/
+div.order-shop{ height: 0.4rem;}
+div.order-list{width: 100%; height: 100%; line-height: 0.7rem; padding-left: 0; box-sizing: border-box; display: -webkit-box; display: -ms-flexbox;display: flex;}
+div.order-detail{ height: 100%; flex: 1; display: flex;}
+div.cart-order{ margin-top: 0.05rem;}
+div.order-info{ margin-top: 0.05rem; margin-left: 0.05rem;}
+div.order-info h3{ font-size: 0.1rem; font-weight: 400; color: #000;}
+div.order-info p{ font-size: 0.1rem; font-weight: 400; color: #000; line-height: 0.16rem; color: #999;}
+div.order-price{ min-width: 0.5rem; text-align: right; line-height: 0.16rem; padding-top: 0.05rem; font-size: 0.1rem;}
+p.order-now-price{font-weight: 700;  text-overflow: ellipsis;  white-space: nowrap;  overflow: hidden; color: #000;}
+p.order-old-price{ color: #999; font-weight: 700;  text-overflow: ellipsis;  white-space: nowrap;  overflow: hidden; text-decoration: line-through;}
+p.order-number{}
 
 
 

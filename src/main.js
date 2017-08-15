@@ -18,8 +18,6 @@ import "./assets/css/master.css"
 import "./assets/css/caipiao.scss"
 import "mint-ui/lib/style.css"
 
-
-
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
